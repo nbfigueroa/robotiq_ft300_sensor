@@ -18,15 +18,15 @@
     ```
 ---
 ## Usage    
-- To stream the FT sensor messages which are of the following format:
-```bash
-float32 fx
-float32 fy
-float32 fz
-float32 Mx
-float32 My
-float32 Mz
- ```
+- To stream the FT sensor messages, `MSG`, which is of the following format:
+    ```bash
+    float32 fx
+    float32 fy
+    float32 fz
+    float32 Mx
+    float32 My
+    float32 Mz
+     ```
 You must run the following node:
 ```bash
   $ rosrun robotiq_force_torque_sensor rq_sensor
