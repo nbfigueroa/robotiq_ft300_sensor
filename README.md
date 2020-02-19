@@ -27,16 +27,16 @@
     float32 My
     float32 Mz
      ```
-You must run the following node:
-  ```bash
-   $ rosrun robotiq_force_torque_sensor rq_sensor
-   ```
+  You must run the following node:
+    ```bash
+    $ rosrun robotiq_force_torque_sensor rq_sensor
+    ```
  - To listen to the published FT messages you can run:
    ```bash
     $ rosrun robotiq_force_torque_sensor rq_sensor
    ```
- or simply subscribe to the message:
-   ```bash
+   or simply subscribe to the message:
+    ```bash
     $ rostopic echo ...
-   ```
+    ```
  
