@@ -18,7 +18,7 @@
     ```
 ---
 ## Usage    
-- To stream the FT sensor messages, `MSG`, which is of the following format:
+- To stream the custom FT sensor message, `/robotiq_force_torque_sensor`, which has of the following format:
     ```bash
     float32 fx
     float32 fy
@@ -27,16 +27,20 @@
     float32 My
     float32 Mz
      ```
-  You must run the following node:
+     or `geometry_msgs/WrenchStamped` named `/robotiq_force_torque_wrench`. You must run the following node:
     ```bash
     $ rosrun robotiq_force_torque_sensor rq_sensor
     ```
- - To listen to the published FT messages you can run:
+ - To listen to subscribed to the topics or visualize the messages from command line:
    ```bash
-    $ rosrun robotiq_force_torque_sensor rq_sensor
+    $ rostopic echo /robotiq_force_torque_sensor
    ```
    or simply subscribe to the message:
     ```bash
-    $ rostopic echo ...
+    $ rostopic echo /robotiq_force_torque_wrench
     ```
- 
+ - To bias the sensor and test the readings you can run the following node:
+    ```bash
+    $ rosrun robotiq_force_torque_sensor rq_test_sensor
+    ```
+ - If there is a tool attached to the sensor you can calibrate using the following something like this...[force_torque_tools](https://github.com/kth-ros-pkg/force_torque_tools)
