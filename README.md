@@ -5,7 +5,7 @@
 
 ## Installation and Compilation
   1. Connect all the cables and check that the sensor is properly powered. 
-   - Add pictures
+    - Add pictures
   2. Go to the driver folder `/robotiq_ft_sensor_dev_v1.0.1` and follow the compilation instructions stated in the FT 300 sensor [manual](https://assets.robotiq.com/website-assets/support_documents/document/FT_Sensor_Instruction_Manual_PDF_20181218.pdf) in **Section 4.2.2 Linux** page 79. Check that the device is recognized by your PC and the test code works (i.e. data is streaming). 
   - To get an update version of the driver you can download it from [https://robotiq.com/support](https://robotiq.com/support). Search for FT300 Force Torque Sensor -> Software -> PC Integration -> Sensor Development. 
    
