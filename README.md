@@ -11,7 +11,7 @@
    
   3. If you are using one of robotiq's grippers you probably have the robotiq [stack](https://github.com/ros-industrial/robotiq/tree/indigo-devel) which includes the [robotiq_force_torque_sensor](https://github.com/ros-industrial/robotiq/tree/indigo-devel/robotiq_force_torque_sensor) and you can skip this step. Otherwise:
   - Delete the CATKIN_IGNORE file in `robotiq_ft300_sensor/robotiq_force_torque_sensor/.`
-  - Compile pacake:
+  - Compile package:
     ```bash
     $ cd ~/catkin_ws
     $ catkin_make
