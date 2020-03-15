@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(robotiq_force_torque_sensor)
+project(robotiq_force_torque_sensor_custom)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -46,15 +46,15 @@ include_directories(
 )
 
 # make the executables
-add_executable(rq_sensor nodes/rq_sensor.cpp src/rq_sensor_com.cpp src/rq_sensor_state.cpp)
-add_dependencies(rq_sensor ${catkin_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg ${PROJECT_NAME}_gencpp)
-target_link_libraries(rq_sensor ${catkin_LIBRARIES})
+add_executable(rq_sensor_custom nodes/rq_sensor.cpp src/rq_sensor_com.cpp src/rq_sensor_state.cpp)
+add_dependencies(rq_sensor_custom ${catkin_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg ${PROJECT_NAME}_gencpp)
+target_link_libraries(rq_sensor_custom ${catkin_LIBRARIES})
 
-add_executable(rq_test_sensor nodes/rq_test_sensor.cpp)
-add_dependencies(rq_test_sensor ${catkin_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg ${PROJECT_NAME}_gencpp)
-target_link_libraries(rq_test_sensor ${catkin_LIBRARIES})
+add_executable(rq_stream_sensor_custom nodes/rq_stream_sensor.cpp)
+add_dependencies(rq_stream_sensor_custom ${catkin_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg ${PROJECT_NAME}_gencpp)
+target_link_libraries(rq_stream_sensor_custom ${catkin_LIBRARIES})
 
-install(TARGETS rq_sensor rq_test_sensor
+install(TARGETS rq_sensor_custom rq_stream_sensor_custom
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
